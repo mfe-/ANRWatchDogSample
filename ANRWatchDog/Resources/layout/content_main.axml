@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+	android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
@@ -13,4 +14,96 @@
         android:layout_centerInParent="true"
         android:text="Hello World!" />
 
-</RelativeLayout>
+<ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+ />
+
+
+    <TextView
+        android:id="@+id/minAnrDurationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/min_anr_duration"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+ />
+
+    <Button
+        android:id="@+id/minAnrDuration"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+         tools:text="2 Seconds" />
+
+    <TextView
+        android:id="@+id/reportModeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/report_mode"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+ />
+
+    <Button
+        android:id="@+id/reportMode"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+         tools:text="All threads" />
+
+    <TextView
+        android:id="@+id/behaviourLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/behaviour"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+ />
+
+    <Button
+        android:id="@+id/behaviour"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        tools:text="Crash" />
+
+    <Button
+        android:id="@+id/threadSleep"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:padding="20dp"
+        android:text="@string/threadsleep"
+ />
+
+
+    <Button
+        android:id="@+id/infiniteLoop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="@string/infiniteloop"
+ />
+
+    <Button
+        android:id="@+id/deadlock"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:padding="20dp"
+        android:text="@string/deadlock"
+
+ />
+
+
+</LinearLayout>
